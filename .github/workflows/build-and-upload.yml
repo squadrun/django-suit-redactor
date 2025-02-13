@@ -45,6 +45,3 @@ jobs:
         run: |
           aws s3 cp "$NEW_PACKAGE" "s3://squad-adhoc-dump/gh-actions/"
           echo "S3_URL=https://squad-adhoc-dump.s3.ap-south-1.amazonaws.com/gh-actions/$NEW_PACKAGE" >> $GITHUB_ENV
-
-      - name: Print S3 Public URL
-        run: echo "Uploaded file URL: $S3_URL"
